@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/feature/generic_pages.dart/generic_pages.dart';
 import 'package:flutter_portfolio/feature/rebound_effect/rebound_injection.dart';
+import 'package:flutter_portfolio/feature/set_state_sm/set_state_page.dart';
 import 'package:flutter_portfolio/feature/shimmer_effect/shimmer_injection.dart';
+import 'package:flutter_portfolio/feature/streams_sm/stream_injection.dart';
 
 Map<String, WidgetBuilder> routes() {
   return <String, WidgetBuilder>{
@@ -12,5 +14,7 @@ Map<String, WidgetBuilder> routes() {
     AnimationsPage.route: (BuildContext context) => const AnimationsPage(),
     StateManagementPage.route: (BuildContext context) =>
         const StateManagementPage(),
+    SetStatePage.route: (BuildContext context) => const SetStatePage(),
+    SteamInjection.route: (BuildContext context) => SteamInjection.injection(),
   };
 }
