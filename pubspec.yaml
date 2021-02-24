@@ -1,0 +1,23 @@
+name: flutter_portfolio
+description: Hi my name is Juan and i have created this project to capture my knowledge about flutter
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  pedantic: ^1.9.2
+
+
+flutter:
+
+  uses-material-design: true
+
