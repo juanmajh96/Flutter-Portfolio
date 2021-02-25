@@ -72,15 +72,15 @@ class _InfinityPainter extends CustomPainter {
       ).createShader(rect);
 
     final Path path_0 = Path();
-    path_0.moveTo(size.width * 0.50, size.height * 0.03);
-    path_0.cubicTo(size.width * 0.68, size.height * 0.03, size.width * 0.97,
-        size.height * 0.16, size.width * 0.97, size.height * 0.50);
-    path_0.cubicTo(size.width * 0.97, size.height * 0.69, size.width * 0.83,
-        size.height * 0.97, size.width * 0.50, size.height * 0.97);
-    path_0.cubicTo(size.width * 0.31, size.height * 0.97, size.width * 0.03,
-        size.height * 0.83, size.width * 0.03, size.height * 0.50);
-    path_0.cubicTo(size.width * 0.03, size.height * 0.32, size.width * 0.17,
-        size.height * 0.03, size.width * 0.50, size.height * 0.03);
+    path_0.moveTo(size.width * 0.50, size.height * 0.0);
+    path_0.cubicTo(size.width * 0.68, size.height * 0.0, size.width * 1.0,
+        size.height * 0.16, size.width * 1.0, size.height * 0.50);
+    path_0.cubicTo(size.width * 1.0, size.height * 0.69, size.width * 0.83,
+        size.height * 1.0, size.width * 0.50, size.height * 1.0);
+    path_0.cubicTo(size.width * 0.31, size.height * 1.0, size.width * 0.0,
+        size.height * 0.83, size.width * 0.0, size.height * 0.50);
+    path_0.cubicTo(size.width * 0.0, size.height * 0.32, size.width * 0.17,
+        size.height * 0.0, size.width * 0.50, size.height * 0.0);
     path_0.close();
 
     final Path path = Path.combine(
@@ -89,27 +89,12 @@ class _InfinityPainter extends CustomPainter {
       Path()..addRect(rect),
     );
     path.addRect(rect);
+    canvas.drawPath(path_0, paintGradient);
 
-    canvas.drawPath(path, paintGradient);
-
-    final Paint paint_1 = Paint()
+    /* final Paint paint_1 = Paint()
       ..color = Colors.green
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 1.0;
-
-    final Path path_1 = Path();
-    path_1.moveTo(size.width * 0.50, size.height * 0.08);
-    path_1.cubicTo(size.width * 0.67, size.height * 0.08, size.width * 0.92,
-        size.height * 0.20, size.width * 0.92, size.height * 0.50);
-    path_1.cubicTo(size.width * 0.92, size.height * 0.67, size.width * 0.80,
-        size.height * 0.92, size.width * 0.50, size.height * 0.92);
-    path_1.cubicTo(size.width * 0.33, size.height * 0.92, size.width * 0.07,
-        size.height * 0.80, size.width * 0.07, size.height * 0.50);
-    path_1.cubicTo(size.width * 0.07, size.height * 0.33, size.width * 0.20,
-        size.height * 0.08, size.width * 0.50, size.height * 0.08);
-    path_1.close();
-
-    canvas.drawPath(path_1, paint_1);
+      ..strokeWidth = 1.0; */
   }
 
   @override
