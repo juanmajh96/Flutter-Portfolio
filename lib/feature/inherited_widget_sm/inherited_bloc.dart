@@ -1,50 +1,35 @@
-import 'dart:async';
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_portfolio/core/entities/state_page.dart';
 
-class StreamBloc {
-  final StreamController<StatePage> _streamController =
-      StreamController<StatePage>();
-
-  StreamController<StatePage> get streamController => _streamController;
-
+class InheritedBloc extends ChangeNotifier {
   StatePage statePage;
 
   Future<void> initDemo() async {
+    statePage = StatePage.loading;
     await Future<dynamic>.delayed(
       const Duration(milliseconds: 1400),
     );
     statePage = StatePage.complete;
-    if (!_streamController.isClosed) {
-      _streamController.sink.add(statePage);
-    }
+    notifyListeners();
     await Future<dynamic>.delayed(
       const Duration(milliseconds: 1000),
     );
     statePage = StatePage.loading;
-    if (!_streamController.isClosed) {
-      _streamController.sink.add(statePage);
-    }
+    notifyListeners();
     await Future<dynamic>.delayed(
       const Duration(milliseconds: 1400),
     );
     statePage = StatePage.error;
-    if (!_streamController.isClosed) {
-      _streamController.sink.add(statePage);
-    }
+    notifyListeners();
     await Future<dynamic>.delayed(
       const Duration(milliseconds: 1400),
     );
     statePage = StatePage.loading;
-    if (!_streamController.isClosed) {
-      _streamController.sink.add(statePage);
-    }
+    notifyListeners();
     await Future<dynamic>.delayed(
       const Duration(milliseconds: 1400),
     );
     statePage = StatePage.complete;
-    if (!_streamController.isClosed) {
-      _streamController.sink.add(statePage);
-    }
+    notifyListeners();
   }
 }

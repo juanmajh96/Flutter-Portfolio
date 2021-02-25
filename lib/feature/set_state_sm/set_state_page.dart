@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/core/entities/state_page.dart';
 
 class SetStatePage extends StatefulWidget {
   const SetStatePage({Key key}) : super(key: key);
@@ -9,6 +10,51 @@ class SetStatePage extends StatefulWidget {
 
 class _SetStatePageState extends State<SetStatePage> {
   int number = 0;
+  StatePage statePage = StatePage.loading;
+  @override
+  void initState() {
+    initDemo();
+    super.initState();
+  }
+
+  Future<void> initDemo() async {
+    await Future<dynamic>.delayed(
+      const Duration(milliseconds: 1400),
+    );
+    statePage = StatePage.complete;
+    if (mounted) {
+      setState(() {});
+    }
+    await Future<dynamic>.delayed(
+      const Duration(milliseconds: 1000),
+    );
+    statePage = StatePage.loading;
+    if (mounted) {
+      setState(() {});
+    }
+    await Future<dynamic>.delayed(
+      const Duration(milliseconds: 1200),
+    );
+    statePage = StatePage.error;
+    if (mounted) {
+      setState(() {});
+    }
+    await Future<dynamic>.delayed(
+      const Duration(milliseconds: 1200),
+    );
+    statePage = StatePage.loading;
+    if (mounted) {
+      setState(() {});
+    }
+    await Future<dynamic>.delayed(
+      const Duration(milliseconds: 1200),
+    );
+    statePage = StatePage.complete;
+    if (mounted) {
+      setState(() {});
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,69 +62,27 @@ class _SetStatePageState extends State<SetStatePage> {
         title: const Text('SetState'),
         centerTitle: true,
       ),
-      body: Column(
-        children: <Widget>[
-          const Spacer(),
-          Expanded(
+      body: Builder(
+        builder: (_) {
+          if (statePage == StatePage.loading) {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          } else if (statePage == StatePage.complete) {
+            return const Center(
+              child: Text(
+                'Complete',
+                style: TextStyle(fontSize: 20),
+              ),
+            );
+          }
+          return const Center(
             child: Text(
-              number.toString(),
-              style: const TextStyle(fontSize: 90),
+              'Error',
+              style: TextStyle(fontSize: 20),
             ),
-          ),
-          Expanded(
-            child: Row(
-              children: <Widget>[
-                const Spacer(),
-                Expanded(
-                  flex: 3,
-                  child: MaterialButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    onPressed: () {
-                      number--;
-                      setState(() {});
-                    },
-                    color: Colors.red,
-                    child: const Padding(
-                      padding: EdgeInsets.all(18.0),
-                      child: FittedBox(
-                        child: Text(
-                          'Remove',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                const Spacer(),
-                Expanded(
-                  flex: 3,
-                  child: MaterialButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    onPressed: () {
-                      number++;
-                      setState(() {});
-                    },
-                    color: Colors.green,
-                    child: const Padding(
-                      padding: EdgeInsets.all(18.0),
-                      child: FittedBox(
-                        child: Text(
-                          'Add',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                const Spacer(),
-              ],
-            ),
-          )
-        ],
+          );
+        },
       ),
     );
   }

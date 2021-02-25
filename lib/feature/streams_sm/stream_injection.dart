@@ -4,9 +4,9 @@ import 'package:flutter_portfolio/feature/streams_sm/stream_page.dart';
 
 class SteamInjection {
   SteamInjection._();
-  static String route = 'SetState';
+  static String route = 'Stream';
   static Widget injection() {
-    final StreamBloc _streamBloc = StreamBloc()..init();
+    final StreamBloc _streamBloc = StreamBloc()..initDemo();
     return StreamPage(streamBloc: _streamBloc);
   }
 }

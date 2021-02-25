@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/core/entities/state_page.dart';
 
 import 'package:flutter_portfolio/feature/streams_sm/stream_bloc.dart';
 
@@ -24,75 +25,32 @@ class _StreamPageState extends State<StreamPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Streams'),
+        title: const Text('Stream'),
         centerTitle: true,
       ),
-      body: Column(
-        children: <Widget>[
-          const Spacer(),
-          Expanded(
-            child: StreamBuilder<int>(
-              stream: widget.streamBloc.streamController.stream,
-              builder: (_, AsyncSnapshot<int> snapshot) {
-                return Text(
-                  snapshot.data.toString(),
-                  style: const TextStyle(fontSize: 90),
-                );
-              },
+      body: StreamBuilder<StatePage>(
+        initialData: StatePage.loading,
+        stream: widget.streamBloc.streamController.stream,
+        builder: (_, AsyncSnapshot<StatePage> snapshot) {
+          if (snapshot.data == StatePage.loading) {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          } else if (snapshot.data == StatePage.complete) {
+            return const Center(
+              child: Text(
+                'Complete',
+                style: TextStyle(fontSize: 20),
+              ),
+            );
+          }
+          return const Center(
+            child: Text(
+              'Error',
+              style: TextStyle(fontSize: 20),
             ),
-          ),
-          Expanded(
-            child: Row(
-              children: <Widget>[
-                const Spacer(),
-                Expanded(
-                  flex: 3,
-                  child: MaterialButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    onPressed: () {
-                      widget.streamBloc.remove();
-                    },
-                    color: Colors.red,
-                    child: const Padding(
-                      padding: EdgeInsets.all(18.0),
-                      child: FittedBox(
-                        child: Text(
-                          'Remove',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                const Spacer(),
-                Expanded(
-                  flex: 3,
-                  child: MaterialButton(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    onPressed: () {
-                      widget.streamBloc.add();
-                    },
-                    color: Colors.green,
-                    child: const Padding(
-                      padding: EdgeInsets.all(18.0),
-                      child: FittedBox(
-                        child: Text(
-                          'Add',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                const Spacer(),
-              ],
-            ),
-          )
-        ],
+          );
+        },
       ),
     );
   }
