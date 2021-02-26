@@ -1,7 +1,7 @@
 import 'package:flutter_portfolio/core/entities/category_entities.dart';
 import 'package:flutter_portfolio/core/entities/feature_entities.dart';
 import 'package:flutter_portfolio/feature/generic_pages.dart/generic_pages.dart';
-import 'package:flutter_portfolio/feature/infinity_effect/inifinity_injection.dart';
+import 'package:flutter_portfolio/feature/radar_effect/radar_injection.dart';
 import 'package:flutter_portfolio/feature/inherited_widget_sm/inherited_injection.dart';
 import 'package:flutter_portfolio/feature/provider_sm/provider_injection.dart';
 import 'package:flutter_portfolio/feature/rebound_effect/rebound_injection.dart';
@@ -15,7 +15,7 @@ List<Category> category = <Category>[
 ];
 
 List<Feature> animationsList = <Feature>[
-  Feature(InfinityInjection.route, 'Infinity'),
+  Feature(RadarInjection.route, 'radar'),
   Feature(ReboundInjection.route, 'Rebound'),
   Feature(ShimmerInjection.route, 'Shimmer'),
 ];

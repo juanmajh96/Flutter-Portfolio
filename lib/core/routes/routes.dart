@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/feature/generic_pages.dart/generic_pages.dart';
-import 'package:flutter_portfolio/feature/infinity_effect/inifinity_injection.dart';
+import 'package:flutter_portfolio/feature/radar_effect/radar_injection.dart';
 import 'package:flutter_portfolio/feature/inherited_widget_sm/inherited_injection.dart';
 import 'package:flutter_portfolio/feature/provider_sm/provider_injection.dart';
 import 'package:flutter_portfolio/feature/rebound_effect/rebound_injection.dart';
@@ -23,7 +23,6 @@ Map<String, WidgetBuilder> routes() {
         InheritedInjection.injection(),
     ProviderInjection.route: (BuildContext context) =>
         ProviderInjection.injection(),
-    InfinityInjection.route: (BuildContext context) =>
-        InfinityInjection.injection(),
+    RadarInjection.route: (BuildContext context) => RadarInjection.injection(),
   };
 }

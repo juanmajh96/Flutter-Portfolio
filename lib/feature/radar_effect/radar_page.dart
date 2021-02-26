@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/feature/infinity_effect/widgets/infinity_animation.dart';
+import 'package:flutter_portfolio/feature/radar_effect/widgets/radar_animation.dart';
 
-class InfinityPage extends StatelessWidget {
-  const InfinityPage({Key key}) : super(key: key);
+class RadarPage extends StatelessWidget {
+  const RadarPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Infinity Animation'),
+        title: const Text('Radar Animation'),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -17,7 +17,11 @@ class InfinityPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: Column(
               children: const <Widget>[
-                InfinityAnimation(),
+                Spacer(),
+                Expanded(
+                  child: RadarAnimation(),
+                ),
+                Spacer(),
               ],
             ),
           ),

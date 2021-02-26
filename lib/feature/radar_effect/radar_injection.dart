@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'inifinity_page.dart';
+import 'radar_page.dart';
 
-class InfinityInjection {
-  InfinityInjection._();
+class RadarInjection {
+  RadarInjection._();
 
   static String route = 'infinity';
   static Widget injection() {
-    return const InfinityPage();
+    return const RadarPage();
   }
 }
