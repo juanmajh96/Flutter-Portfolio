@@ -25,5 +25,5 @@ List<Feature> stateManagementList = <Feature>[
   Feature(SteamInjection.route, 'Streams'),
   Feature(InheritedInjection.route, 'InheritedWidget'),
   Feature(ProviderInjection.route, 'Provider'),
-  Feature(ShimmerInjection.route, 'Riverpod'),
+  // Feature(ShimmerInjection.route, 'Riverpod'),
 ];

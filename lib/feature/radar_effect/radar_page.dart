@@ -16,12 +16,9 @@ class RadarPage extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: const <Widget>[
-                Spacer(),
-                Expanded(
-                  child: RadarAnimation(),
-                ),
-                Spacer(),
+                RadarAnimation(),
               ],
             ),
           ),

@@ -176,7 +176,7 @@ class RadarSearch extends CustomPainter {
     );
 
     final Paint paintPoint2 = Paint()
-      ..color = _valueAnimation < -223 && (_valueAnimation > -340)
+      ..color = _valueAnimation < -233 && (_valueAnimation > -340)
           ? Colors.green[400].withOpacity(opacity270.value)
           : Colors.transparent
       ..style = PaintingStyle.fill
