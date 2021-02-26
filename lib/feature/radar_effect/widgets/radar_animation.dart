@@ -16,6 +16,9 @@ class RadarAnimation extends StatefulWidget {
 class _RadarAnimationState extends State<RadarAnimation>
     with SingleTickerProviderStateMixin {
   AnimationController _controller;
+  Animation<double> _opacity;
+  Animation<double> _opacity90;
+  Animation<double> _opacity270;
 
   @override
   void initState() {
@@ -23,6 +26,24 @@ class _RadarAnimationState extends State<RadarAnimation>
     _controller = AnimationController(
       vsync: this,
       duration: widget.duration,
+    );
+    _opacity = Tween<double>(begin: 1.0, end: 0.0).animate(
+      CurvedAnimation(
+        parent: _controller,
+        curve: const Interval(0.0, 0.3),
+      ),
+    );
+    _opacity90 = Tween<double>(begin: 1.0, end: 0.0).animate(
+      CurvedAnimation(
+        parent: _controller,
+        curve: const Interval(0.3, 0.6),
+      ),
+    );
+    _opacity270 = Tween<double>(begin: 1.0, end: 0.0).animate(
+      CurvedAnimation(
+        parent: _controller,
+        curve: const Interval(0.7, 1.0),
+      ),
     );
     _controller.repeat();
   }
@@ -40,7 +61,11 @@ class _RadarAnimationState extends State<RadarAnimation>
         return Stack(
           children: <Widget>[
             CustomPaint(
-              painter: RadarSearch(controller: _controller),
+              painter: RadarSearch(
+                  controller: _controller,
+                  opacity: _opacity,
+                  opacity90: _opacity90,
+                  opacity270: _opacity270),
               size: const Size(250.0, 250.0),
             ),
             RepaintBoundary(
@@ -57,11 +82,14 @@ class _RadarAnimationState extends State<RadarAnimation>
 }
 
 class RadarSearch extends CustomPainter {
-  RadarSearch({this.controller})
+  RadarSearch({this.controller, this.opacity, this.opacity90, this.opacity270})
       : super(
           repaint: controller,
         );
   final Animation<double> controller;
+  final Animation<double> opacity;
+  final Animation<double> opacity90;
+  final Animation<double> opacity270;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -103,11 +131,15 @@ class RadarSearch extends CustomPainter {
     canvas.drawPath(circleRect, paintGradient);
 
     final Paint paintPoint1 = Paint()
-      ..color = _valueAnimation > -90 ? Colors.red[400] : Colors.transparent
+      ..color = _valueAnimation > -190
+          ? Colors.red[400].withOpacity(opacity.value)
+          : Colors.transparent
       ..style = PaintingStyle.fill
       ..strokeWidth = 1.0;
     final Paint paintPoint1Green = Paint()
-      ..color = _valueAnimation > -90 ? Colors.green[400] : Colors.transparent
+      ..color = _valueAnimation > -190
+          ? Colors.green[400].withOpacity(opacity.value)
+          : Colors.transparent
       ..style = PaintingStyle.fill
       ..strokeWidth = 1.0;
     canvas.drawCircle(
@@ -125,26 +157,10 @@ class RadarSearch extends CustomPainter {
       5,
       paintPoint1Green,
     );
-    final Paint paintPoint2 = Paint()
-      ..color = _valueAnimation < -223 && (_valueAnimation > -320)
-          ? Colors.green[400]
-          : Colors.transparent
-      ..style = PaintingStyle.fill
-      ..strokeWidth = 1.0;
-    canvas.drawCircle(
-      Offset(size.width / 3.9, size.height / 1.5),
-      5,
-      paintPoint2,
-    );
-    canvas.drawCircle(
-      Offset(size.width / 3.7, size.height / 1.3),
-      5,
-      paintPoint2,
-    );
 
     final Paint paintPoint3 = Paint()
-      ..color = _valueAnimation < -80 && (_valueAnimation > -160)
-          ? Colors.green[400]
+      ..color = _valueAnimation < -80 && (_valueAnimation > -260)
+          ? Colors.green[400].withOpacity(opacity90.value)
           : Colors.transparent
       ..style = PaintingStyle.fill
       ..strokeWidth = 1.0;
@@ -158,14 +174,27 @@ class RadarSearch extends CustomPainter {
       5,
       paintPoint3,
     );
+
+    final Paint paintPoint2 = Paint()
+      ..color = _valueAnimation < -223 && (_valueAnimation > -340)
+          ? Colors.green[400].withOpacity(opacity270.value)
+          : Colors.transparent
+      ..style = PaintingStyle.fill
+      ..strokeWidth = 1.0;
+    canvas.drawCircle(
+      Offset(size.width / 3.9, size.height / 1.5),
+      5,
+      paintPoint2,
+    );
+    canvas.drawCircle(
+      Offset(size.width / 3.7, size.height / 1.3),
+      5,
+      paintPoint2,
+    );
   }
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
-}
-
-double convertRadiusToSigma(double radius) {
-  return radius * 0.57735 + 0.5;
 }
 
 class CanvasCoordinates extends CustomPainter {
