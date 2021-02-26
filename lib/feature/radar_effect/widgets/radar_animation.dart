@@ -66,7 +66,7 @@ class RadarSearch extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final Rect rect = Offset.zero & size;
-    final double _valueAnimation = 360 * controller.value;
+    final double _valueAnimation = -(360 * controller.value);
 
     final Paint paintGradient = Paint()
       ..shader = SweepGradient(
@@ -103,11 +103,11 @@ class RadarSearch extends CustomPainter {
     canvas.drawPath(circleRect, paintGradient);
 
     final Paint paintPoint1 = Paint()
-      ..color = _valueAnimation > 280 ? Colors.red[400] : Colors.transparent
+      ..color = _valueAnimation > -90 ? Colors.red[400] : Colors.transparent
       ..style = PaintingStyle.fill
       ..strokeWidth = 1.0;
     final Paint paintPoint1Green = Paint()
-      ..color = _valueAnimation > 280 ? Colors.green[400] : Colors.transparent
+      ..color = _valueAnimation > -90 ? Colors.green[400] : Colors.transparent
       ..style = PaintingStyle.fill
       ..strokeWidth = 1.0;
     canvas.drawCircle(
@@ -126,7 +126,7 @@ class RadarSearch extends CustomPainter {
       paintPoint1Green,
     );
     final Paint paintPoint2 = Paint()
-      ..color = _valueAnimation > 50 && (_valueAnimation < 130)
+      ..color = _valueAnimation < -223 && (_valueAnimation > -320)
           ? Colors.green[400]
           : Colors.transparent
       ..style = PaintingStyle.fill
@@ -143,7 +143,7 @@ class RadarSearch extends CustomPainter {
     );
 
     final Paint paintPoint3 = Paint()
-      ..color = _valueAnimation > 190 && (_valueAnimation < 270)
+      ..color = _valueAnimation < -80 && (_valueAnimation > -160)
           ? Colors.green[400]
           : Colors.transparent
       ..style = PaintingStyle.fill
