@@ -11,40 +11,36 @@ class StreamBloc {
   StatePage statePage;
 
   Future<void> initDemo() async {
-    await Future<dynamic>.delayed(
-      const Duration(milliseconds: 1400),
-    );
+    _delayed(1400);
     statePage = StatePage.complete;
     if (!_streamController.isClosed) {
       _streamController.sink.add(statePage);
     }
-    await Future<dynamic>.delayed(
-      const Duration(milliseconds: 1000),
-    );
+    _delayed(1000);
     statePage = StatePage.loading;
     if (!_streamController.isClosed) {
       _streamController.sink.add(statePage);
     }
-    await Future<dynamic>.delayed(
-      const Duration(milliseconds: 1400),
-    );
+    _delayed(1400);
     statePage = StatePage.error;
     if (!_streamController.isClosed) {
       _streamController.sink.add(statePage);
     }
-    await Future<dynamic>.delayed(
-      const Duration(milliseconds: 1400),
-    );
+    _delayed(1400);
     statePage = StatePage.loading;
     if (!_streamController.isClosed) {
       _streamController.sink.add(statePage);
     }
-    await Future<dynamic>.delayed(
-      const Duration(milliseconds: 1400),
-    );
+    _delayed(1400);
     statePage = StatePage.complete;
     if (!_streamController.isClosed) {
       _streamController.sink.add(statePage);
     }
+  }
+
+  Future<void> _delayed(int milliseconds) async {
+    await Future<dynamic>.delayed(
+      const Duration(milliseconds: 1400),
+    );
   }
 }

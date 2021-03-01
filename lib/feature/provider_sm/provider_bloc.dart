@@ -7,29 +7,25 @@ class ProviderBloc {
 
   Future<void> initDemo() async {
     statePage.value = StatePage.loading;
-    await Future<dynamic>.delayed(
-      const Duration(milliseconds: 1400),
-    );
+    await _delayed(1400);
     statePage.value = StatePage.complete;
 
-    await Future<dynamic>.delayed(
-      const Duration(milliseconds: 1000),
-    );
+    await _delayed(1000);
     statePage.value = StatePage.loading;
 
-    await Future<dynamic>.delayed(
-      const Duration(milliseconds: 1400),
-    );
+    await _delayed(1400);
     statePage.value = StatePage.error;
 
-    await Future<dynamic>.delayed(
-      const Duration(milliseconds: 1400),
-    );
+    await _delayed(1400);
     statePage.value = StatePage.loading;
 
+    await _delayed(1400);
+    statePage.value = StatePage.complete;
+  }
+
+  Future<void> _delayed(int milliseconds) async {
     await Future<dynamic>.delayed(
       const Duration(milliseconds: 1400),
     );
-    statePage.value = StatePage.complete;
   }
 }

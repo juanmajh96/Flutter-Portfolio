@@ -18,41 +18,37 @@ class _SetStatePageState extends State<SetStatePage> {
   }
 
   Future<void> initDemo() async {
-    await Future<dynamic>.delayed(
-      const Duration(milliseconds: 1400),
-    );
+    _delayed(1400);
     statePage = StatePage.complete;
     if (mounted) {
       setState(() {});
     }
-    await Future<dynamic>.delayed(
-      const Duration(milliseconds: 1000),
-    );
+    _delayed(1000);
     statePage = StatePage.loading;
     if (mounted) {
       setState(() {});
     }
-    await Future<dynamic>.delayed(
-      const Duration(milliseconds: 1200),
-    );
+    _delayed(1200);
     statePage = StatePage.error;
     if (mounted) {
       setState(() {});
     }
-    await Future<dynamic>.delayed(
-      const Duration(milliseconds: 1200),
-    );
+    _delayed(1400);
     statePage = StatePage.loading;
     if (mounted) {
       setState(() {});
     }
-    await Future<dynamic>.delayed(
-      const Duration(milliseconds: 1200),
-    );
+    _delayed(1400);
     statePage = StatePage.complete;
     if (mounted) {
       setState(() {});
     }
+  }
+
+  Future<void> _delayed(int milliseconds) async {
+    await Future<dynamic>.delayed(
+      const Duration(milliseconds: 1400),
+    );
   }
 
   @override
