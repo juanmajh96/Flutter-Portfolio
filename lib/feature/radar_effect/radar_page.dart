@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/feature/radar_effect/widgets/radar_animation.dart';
 
 class RadarPage extends StatelessWidget {
-  const RadarPage({Key key}) : super(key: key);
+  const RadarPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

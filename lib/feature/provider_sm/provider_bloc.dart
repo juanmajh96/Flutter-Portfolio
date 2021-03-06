@@ -9,16 +9,12 @@ class ProviderBloc {
     statePage.value = StatePage.loading;
     await _delayed(1400);
     statePage.value = StatePage.complete;
-
     await _delayed(1000);
     statePage.value = StatePage.loading;
-
     await _delayed(1400);
     statePage.value = StatePage.error;
-
     await _delayed(1400);
     statePage.value = StatePage.loading;
-
     await _delayed(1400);
     statePage.value = StatePage.complete;
   }

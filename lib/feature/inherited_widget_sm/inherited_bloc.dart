@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_portfolio/core/entities/state_page.dart';
 
 class InheritedBloc extends ChangeNotifier {
-  StatePage statePage;
+  StatePage statePage = StatePage.loading;
 
   Future<void> initDemo() async {
     statePage = StatePage.loading;

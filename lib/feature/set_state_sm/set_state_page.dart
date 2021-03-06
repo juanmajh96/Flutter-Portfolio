@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/core/entities/state_page.dart';
 
 class SetStatePage extends StatefulWidget {
-  const SetStatePage({Key key}) : super(key: key);
+  const SetStatePage({Key? key}) : super(key: key);
   static String route = 'SetState';
   @override
   _SetStatePageState createState() => _SetStatePageState();
@@ -18,27 +18,27 @@ class _SetStatePageState extends State<SetStatePage> {
   }
 
   Future<void> initDemo() async {
-    _delayed(1400);
+    await _delayed(1400);
     statePage = StatePage.complete;
     if (mounted) {
       setState(() {});
     }
-    _delayed(1000);
+    await _delayed(1000);
     statePage = StatePage.loading;
     if (mounted) {
       setState(() {});
     }
-    _delayed(1200);
+    await _delayed(1200);
     statePage = StatePage.error;
     if (mounted) {
       setState(() {});
     }
-    _delayed(1400);
+    await _delayed(1400);
     statePage = StatePage.loading;
     if (mounted) {
       setState(() {});
     }
-    _delayed(1400);
+    await _delayed(1400);
     statePage = StatePage.complete;
     if (mounted) {
       setState(() {});

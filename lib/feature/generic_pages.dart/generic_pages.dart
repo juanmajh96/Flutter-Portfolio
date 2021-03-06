@@ -4,14 +4,14 @@ import 'package:flutter_portfolio/core/sources/list_feature.dart';
 
 class StateManagementPage extends StatelessWidget {
   const StateManagementPage({
-    Key key,
+    Key? key,
   }) : super(key: key);
   static String route = 'StateManagement';
 
   @override
   Widget build(BuildContext context) {
     final Feature featureArg =
-        ModalRoute.of(context).settings.arguments as Feature;
+        ModalRoute.of(context)!.settings.arguments as Feature;
     return Scaffold(
       appBar: AppBar(
         title: Text(featureArg.title),
@@ -46,14 +46,14 @@ class StateManagementPage extends StatelessWidget {
 
 class AnimationsPage extends StatelessWidget {
   const AnimationsPage({
-    Key key,
+    Key? key,
   }) : super(key: key);
   static String route = 'Animations';
 
   @override
   Widget build(BuildContext context) {
     final Feature featureArg =
-        ModalRoute.of(context).settings.arguments as Feature;
+        ModalRoute.of(context)!.settings.arguments as Feature;
     return Scaffold(
       appBar: AppBar(
         title: Text(featureArg.title),

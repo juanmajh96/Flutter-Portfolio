@@ -3,12 +3,12 @@ import 'package:flutter_portfolio/core/entities/state_page.dart';
 import 'package:flutter_portfolio/feature/inherited_widget_sm/inherited_bloc.dart';
 
 class InheritedPage extends StatelessWidget {
-  const InheritedPage({Key key}) : super(key: key);
+  const InheritedPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final InheritedBloc _inheritedBloc =
-        HomeInheritedWidget.of(context).inheritedBloc;
+        HomeInheritedWidget.of(context)!.inheritedBloc;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Inherited Widget'),
@@ -43,16 +43,17 @@ class InheritedPage extends StatelessWidget {
 
 class HomeInheritedWidget extends InheritedWidget {
   const HomeInheritedWidget({
-    @required this.child,
-    this.inheritedBloc,
-  });
+    Key? key,
+    required this.child,
+    required this.inheritedBloc,
+  }) : super(key: key, child: child);
 
   @override
   // ignore: overridden_fields
   final Widget child;
   final InheritedBloc inheritedBloc;
 
-  static HomeInheritedWidget of(BuildContext context) =>
+  static HomeInheritedWidget? of(BuildContext context) =>
       context.dependOnInheritedWidgetOfExactType();
 
   @override

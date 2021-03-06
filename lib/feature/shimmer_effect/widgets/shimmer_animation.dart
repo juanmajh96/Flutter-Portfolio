@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ShimmerAnimation extends StatelessWidget {
   const ShimmerAnimation({
-    Key key,
+    Key? key,
     this.height = 30,
     this.width = 200,
     this.color = Colors.grey,
@@ -15,8 +15,8 @@ class ShimmerAnimation extends StatelessWidget {
   final double width;
   final Color color;
   final double borderRadius;
-  final EdgeInsetsGeometry padding;
-  final EdgeInsetsGeometry margin;
+  final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry? margin;
 
   @override
   Widget build(BuildContext context) {

@@ -8,30 +8,30 @@ class StreamBloc {
 
   StreamController<StatePage> get streamController => _streamController;
 
-  StatePage statePage;
+  StatePage statePage = StatePage.loading;
 
   Future<void> initDemo() async {
-    _delayed(1400);
+    await _delayed(1400);
     statePage = StatePage.complete;
     if (!_streamController.isClosed) {
       _streamController.sink.add(statePage);
     }
-    _delayed(1000);
+    await _delayed(1000);
     statePage = StatePage.loading;
     if (!_streamController.isClosed) {
       _streamController.sink.add(statePage);
     }
-    _delayed(1400);
+    await _delayed(1400);
     statePage = StatePage.error;
     if (!_streamController.isClosed) {
       _streamController.sink.add(statePage);
     }
-    _delayed(1400);
+    await _delayed(1400);
     statePage = StatePage.loading;
     if (!_streamController.isClosed) {
       _streamController.sink.add(statePage);
     }
-    _delayed(1400);
+    await _delayed(1400);
     statePage = StatePage.complete;
     if (!_streamController.isClosed) {
       _streamController.sink.add(statePage);

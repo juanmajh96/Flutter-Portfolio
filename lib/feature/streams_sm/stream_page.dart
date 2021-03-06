@@ -5,8 +5,8 @@ import 'package:flutter_portfolio/feature/streams_sm/stream_bloc.dart';
 
 class StreamPage extends StatefulWidget {
   const StreamPage({
-    Key key,
-    this.streamBloc,
+    Key? key,
+    required this.streamBloc,
   }) : super(key: key);
 
   final StreamBloc streamBloc;

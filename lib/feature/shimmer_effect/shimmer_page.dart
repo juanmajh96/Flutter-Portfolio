@@ -30,7 +30,7 @@ class ShimmerPage extends StatelessWidget {
                   margin: const EdgeInsets.symmetric(horizontal: 60),
                   width: double.infinity,
                   height: 99,
-                  color: Colors.grey[400],
+                  color: Colors.grey[400]!,
                   borderRadius: 20,
                 ),
               ],

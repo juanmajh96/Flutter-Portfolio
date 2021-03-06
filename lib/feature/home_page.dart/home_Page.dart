@@ -4,7 +4,7 @@ import 'package:flutter_portfolio/core/entities/feature_entities.dart';
 import 'package:flutter_portfolio/core/sources/list_feature.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

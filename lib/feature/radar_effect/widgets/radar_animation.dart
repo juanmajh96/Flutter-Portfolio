@@ -3,7 +3,7 @@ import 'package:vector_math/vector_math_64.dart' as vector;
 
 class RadarAnimation extends StatefulWidget {
   const RadarAnimation({
-    Key key,
+    Key? key,
     this.duration = const Duration(milliseconds: 4300),
   }) : super(key: key);
 
@@ -15,10 +15,10 @@ class RadarAnimation extends StatefulWidget {
 
 class _RadarAnimationState extends State<RadarAnimation>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Animation<double> _opacity;
-  Animation<double> _opacity90;
-  Animation<double> _opacity270;
+  late AnimationController _controller;
+  late Animation<double> _opacity;
+  late Animation<double> _opacity90;
+  late Animation<double> _opacity270;
 
   @override
   void initState() {
@@ -82,7 +82,11 @@ class _RadarAnimationState extends State<RadarAnimation>
 }
 
 class RadarSearch extends CustomPainter {
-  RadarSearch({this.controller, this.opacity, this.opacity90, this.opacity270})
+  RadarSearch(
+      {required this.controller,
+      required this.opacity,
+      required this.opacity90,
+      required this.opacity270})
       : super(
           repaint: controller,
         );
@@ -100,8 +104,8 @@ class RadarSearch extends CustomPainter {
       ..shader = SweepGradient(
         tileMode: TileMode.clamp,
         colors: <Color>[
-          Colors.green[400],
-          Colors.green[100],
+          Colors.green[400]!,
+          Colors.green[100]!,
         ],
         startAngle: 0.0,
         endAngle: vector.radians(90),
@@ -132,13 +136,13 @@ class RadarSearch extends CustomPainter {
 
     final Paint paintPoint1 = Paint()
       ..color = _valueAnimation > -190
-          ? Colors.red[400].withOpacity(opacity.value)
+          ? Colors.red[400]!.withOpacity(opacity.value)
           : Colors.transparent
       ..style = PaintingStyle.fill
       ..strokeWidth = 1.0;
     final Paint paintPoint1Green = Paint()
       ..color = _valueAnimation > -190
-          ? Colors.green[400].withOpacity(opacity.value)
+          ? Colors.green[400]!.withOpacity(opacity.value)
           : Colors.transparent
       ..style = PaintingStyle.fill
       ..strokeWidth = 1.0;
@@ -160,15 +164,11 @@ class RadarSearch extends CustomPainter {
 
     final Paint paintPoint3 = Paint()
       ..color = _valueAnimation < -80 && (_valueAnimation > -260)
-          ? Colors.green[400].withOpacity(opacity90.value)
+          ? Colors.green[400]!.withOpacity(opacity90.value)
           : Colors.transparent
       ..style = PaintingStyle.fill
       ..strokeWidth = 1.0;
-    canvas.drawCircle(
-      Offset(size.width / 1.9, size.height / 3.5),
-      5,
-      paintPoint3,
-    );
+
     canvas.drawCircle(
       Offset(size.width / 1.6, size.height / 3.2),
       5,
@@ -177,7 +177,7 @@ class RadarSearch extends CustomPainter {
 
     final Paint paintPoint2 = Paint()
       ..color = _valueAnimation < -233 && (_valueAnimation > -340)
-          ? Colors.green[400].withOpacity(opacity270.value)
+          ? Colors.green[400]!.withOpacity(opacity270.value)
           : Colors.transparent
       ..style = PaintingStyle.fill
       ..strokeWidth = 1.0;

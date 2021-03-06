@@ -4,7 +4,7 @@ import 'package:flutter_portfolio/feature/provider_sm/provider_bloc.dart';
 import 'package:provider/provider.dart';
 
 class ProviderPage extends StatelessWidget {
-  const ProviderPage({Key key}) : super(key: key);
+  const ProviderPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
