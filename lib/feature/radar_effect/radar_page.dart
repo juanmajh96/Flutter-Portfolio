@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/common_widgets/app_bar.dart';
 import 'package:flutter_portfolio/feature/radar_effect/widgets/radar_animation.dart';
 
 class RadarPage extends StatelessWidget {
@@ -7,9 +8,8 @@ class RadarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Radar Animation'),
-        centerTitle: true,
+      appBar: const AppBarClose(
+        title: 'Radar Animation',
       ),
       body: SafeArea(
         child: Center(

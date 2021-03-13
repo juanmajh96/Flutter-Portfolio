@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/common_widgets/button.dart';
+import 'package:flutter_portfolio/core/entities/button_propieties.dart';
 import 'package:flutter_portfolio/core/entities/feature_entities.dart';
 import 'package:flutter_portfolio/core/sources/list_feature.dart';
 
@@ -10,8 +12,8 @@ class StateManagementPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Feature featureArg =
-        ModalRoute.of(context)!.settings.arguments as Feature;
+    final ButtonPropieties featureArg =
+        ModalRoute.of(context)!.settings.arguments as ButtonPropieties;
     return Scaffold(
       appBar: AppBar(
         title: Text(featureArg.title),
@@ -21,18 +23,12 @@ class StateManagementPage extends StatelessWidget {
         child: Center(
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
-            child: Column(
+            child: Wrap(
               children: stateManagementList
                   .map(
-                    (Feature feature) => MaterialButton(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(6.0),
-                      ),
-                      color: Colors.blue,
-                      textColor: Colors.white,
-                      onPressed: () =>
-                          Navigator.pushNamed(context, feature.route),
-                      child: Text(feature.title),
+                    (Feature feature) => Button(
+                      feature: feature,
+                      function: () => (context as Element).markNeedsBuild(),
                     ),
                   )
                   .toList(),
@@ -52,8 +48,8 @@ class AnimationsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Feature featureArg =
-        ModalRoute.of(context)!.settings.arguments as Feature;
+    final ButtonPropieties featureArg =
+        ModalRoute.of(context)!.settings.arguments as ButtonPropieties;
     return Scaffold(
       appBar: AppBar(
         title: Text(featureArg.title),
@@ -63,18 +59,12 @@ class AnimationsPage extends StatelessWidget {
         child: Center(
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
-            child: Column(
+            child: Wrap(
               children: animationsList
                   .map(
-                    (Feature feature) => MaterialButton(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(6.0),
-                      ),
-                      color: Colors.blue,
-                      textColor: Colors.white,
-                      onPressed: () =>
-                          Navigator.pushNamed(context, feature.route),
-                      child: Text(feature.title),
+                    (Feature feature) => Button(
+                      feature: feature,
+                      function: () => (context as Element).markNeedsBuild(),
                     ),
                   )
                   .toList(),
