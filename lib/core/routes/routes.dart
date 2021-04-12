@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/feature/clean_architecture/presenter/presenter.dart';
 import 'package:flutter_portfolio/feature/generic_pages.dart/generic_pages.dart';
 import 'package:flutter_portfolio/feature/radar_effect/radar_injection.dart';
 import 'package:flutter_portfolio/feature/inherited_widget_sm/inherited_injection.dart';
@@ -24,5 +25,7 @@ Map<String, WidgetBuilder> routes() {
     ProviderInjection.route: (BuildContext context) =>
         ProviderInjection.injection(),
     RadarInjection.route: (BuildContext context) => RadarInjection.injection(),
+    CleanInjection.route: (BuildContext context) => CleanInjection.injection(),
+    CleanCode.route: (BuildContext context) => const CleanCode(),
   };
 }

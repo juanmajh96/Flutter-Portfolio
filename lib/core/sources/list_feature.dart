@@ -1,5 +1,6 @@
 import 'package:flutter_portfolio/core/entities/category_entities.dart';
 import 'package:flutter_portfolio/core/entities/feature_entities.dart';
+import 'package:flutter_portfolio/feature/clean_architecture/presenter/presenter.dart';
 import 'package:flutter_portfolio/feature/generic_pages.dart/generic_pages.dart';
 import 'package:flutter_portfolio/feature/radar_effect/radar_injection.dart';
 import 'package:flutter_portfolio/feature/inherited_widget_sm/inherited_injection.dart';
@@ -12,6 +13,7 @@ import 'package:flutter_portfolio/feature/streams_sm/stream_injection.dart';
 List<Category> category = <Category>[
   Category(AnimationsPage.route, 'Animations'),
   Category(StateManagementPage.route, 'StateManagement'),
+  Category(CleanCode.route, 'Clean Code'),
 ];
 
 List<Feature> animationsList = <Feature>[
@@ -25,5 +27,8 @@ List<Feature> stateManagementList = <Feature>[
   Feature(SteamInjection.route, 'Streams'),
   Feature(InheritedInjection.route, 'InheritedWidget'),
   Feature(ProviderInjection.route, 'Provider'),
-  // Feature(ShimmerInjection.route, 'Riverpod'),
+];
+
+List<Feature> cleanCodeList = <Feature>[
+  Feature(CleanInjection.route, 'Clean Architecture'),
 ];

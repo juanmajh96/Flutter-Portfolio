@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final MainBloc _mainBloc = Provider.of<MainBloc>(context, listen: false);
+    final _mainBloc = Provider.of<MainBloc>(context, listen: false);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter portfolio'),

@@ -21,6 +21,7 @@ class Button extends StatelessWidget {
               textColor: Colors.white,
               onPressed: () {
                 feature.seen = true;
+                // ignore: avoid_dynamic_calls
                 function();
                 Navigator.pushNamed(context, feature.route, arguments: feature);
               },
@@ -46,6 +47,7 @@ class Button extends StatelessWidget {
               textColor: Colors.white,
               onPressed: () {
                 feature.seen = true;
+                // ignore: avoid_dynamic_calls
                 function();
                 Navigator.pushNamed(context, feature.route, arguments: feature);
               },

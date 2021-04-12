@@ -7,8 +7,7 @@ class InheritedPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final InheritedBloc _inheritedBloc =
-        HomeInheritedWidget.of(context)!.inheritedBloc;
+    final _inheritedBloc = HomeInheritedWidget.of(context)!.inheritedBloc;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Inherited Widget'),

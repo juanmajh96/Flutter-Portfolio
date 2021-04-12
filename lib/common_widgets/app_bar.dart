@@ -4,8 +4,8 @@ class AppBarClose extends StatelessWidget implements PreferredSizeWidget {
   const AppBarClose({
     Key? key,
     required this.title,
-  })   : preferredSize = const Size.fromHeight(kToolbarHeight),
-        super(key: key);
+    this.preferredSize = const Size.fromHeight(kToolbarHeight),
+  }) : super(key: key);
 
   final String title;
   @override
@@ -16,10 +16,6 @@ class AppBarClose extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(title),
       centerTitle: true,
-      leading: IconButton(
-        icon: const Icon(Icons.close),
-        onPressed: () => Navigator.pop(context),
-      ),
     );
   }
 }

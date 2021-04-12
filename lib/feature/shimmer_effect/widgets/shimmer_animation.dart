@@ -20,7 +20,7 @@ class ShimmerAnimation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double _end = 1.0;
+    var _end = 1.0;
     return StatefulBuilder(
       builder: (_, void Function(void Function()) update) {
         return TweenAnimationBuilder<double>(

@@ -11,11 +11,14 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.0
   provider: ^5.0.0
+  equatable: ^2.0.0
+  dartz: ^0.10.0-nullsafety.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  pedantic: ^1.11.0
+  mocktail: ^0.1.0
+  very_good_analysis: ^2.0.0
 
 
 flutter:

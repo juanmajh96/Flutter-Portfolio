@@ -6,7 +6,7 @@ class SteamInjection {
   SteamInjection._();
   static String route = 'Stream';
   static Widget injection() {
-    final StreamBloc _streamBloc = StreamBloc()..initDemo();
+    final _streamBloc = StreamBloc()..initDemo();
     return StreamPage(streamBloc: _streamBloc);
   }
 }

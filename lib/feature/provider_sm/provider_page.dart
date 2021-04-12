@@ -8,7 +8,7 @@ class ProviderPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ProviderBloc _providerBloc = Provider.of<ProviderBloc>(context);
+    final _providerBloc = Provider.of<ProviderBloc>(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Provider'),

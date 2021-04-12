@@ -12,7 +12,7 @@ class StateManagementPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ButtonPropieties featureArg =
+    final featureArg =
         ModalRoute.of(context)!.settings.arguments as ButtonPropieties;
     return Scaffold(
       appBar: AppBar(
@@ -48,7 +48,7 @@ class AnimationsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ButtonPropieties featureArg =
+    final featureArg =
         ModalRoute.of(context)!.settings.arguments as ButtonPropieties;
     return Scaffold(
       appBar: AppBar(
@@ -61,6 +61,42 @@ class AnimationsPage extends StatelessWidget {
             physics: const BouncingScrollPhysics(),
             child: Wrap(
               children: animationsList
+                  .map(
+                    (Feature feature) => Button(
+                      feature: feature,
+                      function: () => (context as Element).markNeedsBuild(),
+                    ),
+                  )
+                  .toList(),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CleanCode extends StatelessWidget {
+  const CleanCode({
+    Key? key,
+  }) : super(key: key);
+  static String route = 'CleanCode';
+
+  @override
+  Widget build(BuildContext context) {
+    final featureArg =
+        ModalRoute.of(context)!.settings.arguments as ButtonPropieties;
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(featureArg.title),
+        centerTitle: true,
+      ),
+      body: SafeArea(
+        child: Center(
+          child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            child: Wrap(
+              children: cleanCodeList
                   .map(
                     (Feature feature) => Button(
                       feature: feature,
