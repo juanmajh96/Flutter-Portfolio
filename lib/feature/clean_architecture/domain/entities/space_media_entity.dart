@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
-class SpaceMedia extends Equatable {
-  SpaceMedia({
+class SpaceMediaEntity extends Equatable {
+  SpaceMediaEntity({
     required this.descripcion,
     required this.mediaType,
     required this.title,
