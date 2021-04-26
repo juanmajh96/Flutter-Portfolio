@@ -13,7 +13,7 @@ import 'package:flutter_portfolio/feature/streams_sm/stream_injection.dart';
 List<Category> category = <Category>[
   Category(AnimationsPage.route, 'Animations'),
   Category(StateManagementPage.route, 'StateManagement'),
-  Category(CleanCode.route, 'Clean Code'),
+  /* Category(CleanCode.route, 'Clean Code'), */
 ];
 
 List<Feature> animationsList = <Feature>[

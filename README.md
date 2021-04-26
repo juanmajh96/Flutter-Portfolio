@@ -2,15 +2,23 @@
 
 Hi my name is juan and i have created this project to capture my knowledge about flutter
 
-## Getting Started
+## Examples
 
-This project is a starting point for a Flutter application.
+| **Hero Animation**    | **Radar Animation**     | 
+|------------|-------------| 
+|  <center> <img src="https://firebasestorage.googleapis.com/v0/b/prueba-tecnica-tul.appspot.com/o/Gif%2Fexample_hero.gif?alt=media&token=c4f511f3-f966-4fca-9b8c-c2b3c28cefe9" width="250">  </center> | <center>  <img src="https://firebasestorage.googleapis.com/v0/b/prueba-tecnica-tul.appspot.com/o/Gif%2Fradar_animation.gif?alt=media&token=533350e2-0cb9-46e4-8d89-08fe357003df" width="250">  </center> |
 
-A few resources to get you started if this is your first Flutter project:
+| **StateManager**    | **Rebound Animation**     | 
+|------------|-------------| 
+|  <center> <img src="https://firebasestorage.googleapis.com/v0/b/prueba-tecnica-tul.appspot.com/o/Gif%2Fstate_manager.gif?alt=media&token=00285ee3-61b7-4533-bd2f-64a93fc25a64" width="250">  </center> | <center>  <img src="https://firebasestorage.googleapis.com/v0/b/prueba-tecnica-tul.appspot.com/o/Gif%2Frebound_animation.gif?alt=media&token=a1480abf-a83d-430e-9b78-fdf7e5338801" width="250">  </center> |
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+| **Shimmer Animation**    | 
+|------------| 
+|  <center> <img src="https://firebasestorage.googleapis.com/v0/b/prueba-tecnica-tul.appspot.com/o/Gif%2Fshimmer_animation.gif?alt=media&token=0b9f38ab-8b22-4d2f-a884-19d4445f24d4" width="250">  </center> |
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+# Projects
+
+| **Yo soy bacan**    | **Lucy App**     | 
+|------------|-------------| 
+|  <center> <img src="https://firebasestorage.googleapis.com/v0/b/prueba-tecnica-tul.appspot.com/o/Gif%2Fyo_soy_bacan.gif?alt=media&token=458d4fb3-148f-41c0-a29c-b168006164a4" width="250">  </center> | <center>  <img src="https://firebasestorage.googleapis.com/v0/b/prueba-tecnica-tul.appspot.com/o/Gif%2Flucy_app.gif?alt=media&token=d30f430d-70ea-4c0a-980f-a6d1dafd42b1" width="250">  </center> |
