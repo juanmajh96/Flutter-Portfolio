@@ -21,7 +21,7 @@ Hi my name is juan and i have created this project to capture my knowledge about
 
 | **Yo soy bacan**    | **Lucy App**     | 
 |------------|-------------| 
-|  <center> <img src="https://firebasestorage.googleapis.com/v0/b/prueba-tecnica-tul.appspot.com/o/Gif%2Fyo_soy_bacan.gif?alt=media&token=458d4fb3-148f-41c0-a29c-b168006164a4" width="250">  </center> | <center>  <img src="https://firebasestorage.googleapis.com/v0/b/prueba-tecnica-tul.appspot.com/o/Gif%2Flucy_app.gif?alt=media&token=d30f430d-70ea-4c0a-980f-a6d1dafd42b1" width="250">  </center> |
+|  <center> <img src="https://firebasestorage.googleapis.com/v0/b/prueba-tecnica-tul.appspot.com/o/Gif%2Fyo_soy_bacan(1).gif?alt=media&token=bb853ed2-bbd5-40fa-a018-fe8dca2365df" width="250">  </center> | <center>  <img src="https://firebasestorage.googleapis.com/v0/b/prueba-tecnica-tul.appspot.com/o/Gif%2Flucy_app.gif?alt=media&token=d30f430d-70ea-4c0a-980f-a6d1dafd42b1" width="250">  </center> |
 
 | **Seby tools**    | **Soluciones pintuco**     | 
 |------------|-------------| 
