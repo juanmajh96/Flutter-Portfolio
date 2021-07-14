@@ -30,13 +30,10 @@ Cada Semana ire subiendo mas ejemplos
 |------------|-------------| 
 |  <center> <img src="https://miro.medium.com/max/250/1*PnLSJkyw9qt3nlaRxSl_uw.gif" width="250">  </center> | <center>  <img src="https://cdn-images-1.medium.com/max/1200/1*7Vo5TkeAX5cu5wE_y4S1Pg.gif" width="250">  </center> |
 
-Tengo 6 proyectos mas que he realizado y en los proximos dias los ire subiendo aca
+| **Aeropuero el dorado**    | **Coomerce**     | 
+|------------|-------------| 
+|  <center> <img src="https://miro.medium.com/max/250/1*Ir5eQsdwLnVxxoYf5R_gHQ.gif" width="250">  </center> | <center>  <img src="https://miro.medium.com/max/250/1*6wN2UclQjbcQkjR_E83Gug.gif" width="250">  </center> |
 
-```
-- Aeropuerto el dorado 
-- MasterSys
-- Aroma
-- Coommerce
-- Coomerce Vendedor
-- Fortuna App
-```
+| **Coomerce vendedor**    | **Coomerce admin*     | 
+|------------|-------------| 
+|  <center> <img src="https://miro.medium.com/max/250/1*B5NCpzhCJbv7PJGLz9Hh1Q.gif" width="250">  </center> | <center>  <img src="https://miro.medium.com/max/250/1*Cqlp5v2ydxHERZ-7J2l-xQ.gif" width="250">  </center> |
