@@ -34,6 +34,6 @@ Cada Semana ire subiendo mas ejemplos
 |------------|-------------| 
 |  <center> <img src="https://cdn-images-1.medium.com/max/1200/1*lKQs1g0M2LPcfCie_h2J9A.gif" width="250">  </center> | <center>  <img src="https://miro.medium.com/max/500/1*5iW9vhNZghpUEkkj97r0Ww.gif" width="250">  </center> |
 
-| **Coomerce vendedor**    | **Coomerce admin*     | 
+| **Coomerce vendedor**    | **Coomerce admin**     | 
 |------------|-------------| 
 |  <center> <img src="https://miro.medium.com/max/250/1*B5NCpzhCJbv7PJGLz9Hh1Q.gif" width="250">  </center> | <center>  <img src="https://miro.medium.com/max/250/1*Cqlp5v2ydxHERZ-7J2l-xQ.gif" width="250">  </center> |
