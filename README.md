@@ -26,7 +26,7 @@ Cada Semana ire subiendo mas ejemplos
 
 | **Yo soy bacan**    | **Tul Backoffice**    |
 |------------|-------------| 
-|  <center> <img src="https://cdn-images-1.medium.com/max/1200/1*7LYwoZm0bNtH_VeYm7GDbQ.gif" width="250">  </center> | <center>  <img src="https://miro.medium.com/1*j9sz_sC5-EzM91AGaG9xIA.gif?raw=true" width="250">  </center> |
+|  <center> <img src="https://cdn-images-1.medium.com/max/1200/1*7LYwoZm0bNtH_VeYm7GDbQ.gif" width="250">  </center> | <center>  <img src="/1*j9sz_sC5-EzM91AGaG9xIA.gif?raw=true" width="250">  </center> |
 
 | **Seby tools**    | **Soluciones pintuco**     | 
 |------------|-------------| 
