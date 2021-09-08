@@ -24,7 +24,7 @@ Cada Semana ire subiendo mas ejemplos
 
 
 
-| **Yo soy bacan**    | **Tul Backoffice*     | 
+| **Yo soy bacan**    | **Tul Backoffice**    |
 |------------|-------------| 
 |  <center> <img src="https://cdn-images-1.medium.com/max/1200/1*7LYwoZm0bNtH_VeYm7GDbQ.gif" width="250">  </center> | <center>  <img src="https://miro.medium.com/max/500/1*MkMp_DlBoB5jDcf3xCo7Zg.gif" width="250">  </center> |
 
